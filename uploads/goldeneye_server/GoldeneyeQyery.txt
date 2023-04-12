@@ -1,0 +1,135 @@
+select week(DATETIMECREATED),FACEIDAWS,CAMERAID, count(FACEIDAWS) from GEYE_CAMERAFACESLOG   
+where FACEIDAWS='4894638e-4ccd-443d-98f5-098170a47bf1' and week(DATETIMECREATED)=week(curdate())
+group by week(DATETIMECREATED),FACEIDAWS,CAMERAID
+-------------
+
+select week(DATETIMECREATED),FACEIDAWS,CAMERAID, count(FACEIDAWS) from GEYE_CAMERAFACESLOG   
+where FACEIDAWS='fbd4bb4d-1bc1-4b11-b971-2dad1c524545' and week(DATETIMECREATED)=week(curdate())
+group by week(DATETIMECREATED),FACEIDAWS,CAMERAID
+
+current month visit
+
+select month(DATETIMECREATED),FACEIDAWS,CAMERAID, count(FACEIDAWS) from GEYE_CAMERAFACESLOG   
+where FACEIDAWS='fbd4bb4d-1bc1-4b11-b971-2dad1c524545' and month(DATETIMECREATED)=month(curdate())
+group by week(DATETIMECREATED),FACEIDAWS,CAMERAID
+
+current year wise visit
+
+select year(DATETIMECREATED),FACEIDAWS,CAMERAID, count(FACEIDAWS) from GEYE_CAMERAFACESLOG   
+where FACEIDAWS='fbd4bb4d-1bc1-4b11-b971-2dad1c524545' and year(DATETIMECREATED)=year(curdate())
+group by week(DATETIMECREATED),FACEIDAWS,CAMERAID
+
+13.232.193.117
+
+/home/centos/goldeneye/Shahrukh/bbf0a2f7/Logs/Add_img_col/
+/home/centos/goldeneye/Shahrukh/bbf0a2f7/Logs/Face_Attr/
+/home/centos/goldeneye/Shahrukh/bbf0a2f7/Logs/SearchFaces/
+/home/centos/goldeneye/Shahrukh/bbf0a2f7/Logs/WriteMysql/
+
+/home/centos/goldeneye/Shahrukh/990d8147/Logs/Add_img_col/
+/home/centos/goldeneye/Shahrukh/990d8147/Logs/Face_Attr/
+/home/centos/goldeneye/Shahrukh/990d8147/Logs/SearchFaces/
+/home/centos/goldeneye/Shahrukh/990d8147/Logs/WriteMysql/
+
+/home/centos/goldeneye/Shahrukh/9db593a8/Logs/Add_img_col/
+/home/centos/goldeneye/Shahrukh/9db593a8/Logs/Face_Attr/
+/home/centos/goldeneye/Shahrukh/9db593a8/Logs/SearchFaces/
+/home/centos/goldeneye/Shahrukh/9db593a8/Logs/WriteMysql/
+
+/home/centos/goldeneye/Shahrukh/3c01cc89/Logs/Add_img_col/
+/home/centos/goldeneye/Shahrukh/3c01cc89/Logs/Face_Attr/
+/home/centos/goldeneye/Shahrukh/3c01cc89/Logs/SearchFaces/
+/home/centos/goldeneye/Shahrukh/3c01cc89/Logs/WriteMysql/
+
+SELECT DATE_FORMAT(DATETIMECREATED, '%Y-%m-%d') AS DATE, FACEIDAWS, CAMERAID, COUNT(FACEIDAWS), 
+PHOTOFILENAME FROM GEYE_CAMERAFACESLOG GROUP BY DATE, FACEIDAWS, CAMERAID order by DATETIMECREATED desc;
+
+select week(DATETIMECREATED),FACEIDAWS,CAMERAID, count(FACEIDAWS) from GEYE_CAMERAFACESLOG   
+where week(DATETIMECREATED)=week(curdate()) group by week(DATETIMECREATED),FACEIDAWS,CAMERAID order by DATETIMECREATED desc;
+
+SELECT DISTINCT FACEIDAWS, DATETIMECREATED, CAMERAID,PHOTOFILENAME,COUNT(FACEIDAWS) as COUNT FROM GEYE_CAMERAFACESLOG GROUP BY DATETIMECREATED, CAMERAID, PHOTOFILENAME order by DATETIMECREATED desc;
+
+SELECT DISTINCT FACEIDAWS FROM GEYE_CAMERAFACESLOG;
+
+CREATE TABLE GEYE_CAMERAFACESLOG (
+  idGEYE_CAMERAFACESLOG VARCHAR(128) PRIMARY KEY NOT NULL,
+  FACESTRINGAWS JSON NOT NULL,
+  DATETIMECREATED DATETIME NOT NULL,
+  CAMERAID VARCHAR(45) NOT NULL,
+  FACEIDAWS VARCHAR(45) NOT NULL,
+  PHOTOFILENAME VARCHAR(45) DEFAULT NULL
+);
+
+
+
+use dbmaster;
+
+create database 
+
+show dbmaster;
+
+
+select * from app_assessmentquestion;
+
+SHOW CREATE VIEW GEYE_V_FACEDETAIL;
+
+SHOW FULL TABLES IN dbmaster WHERE table_type = 'VIEW';
+
+
+select count(distinct(FACEIDAWS)) from GEYE_CAMERAFACESLOG;
+select * from GEYE_CAMERAFACESLOG order by DATETIMECREATED desc;
+
+SELECT * 
+FROM GEYE_CAMERAFACESLOG 
+WHERE cameraid = '9db593a8';
+
+select * from GEYE_CAMERAFACESLOG where DATE(DATETIMECREATED)=curdate();
+
+select week(DATETIMECREATED),FACEIDAWS,CAMERAID, count(FACEIDAWS) from GEYE_CAMERAFACESLOG   
+where FACEIDAWS='4894638e-4ccd-443d-98f5-098170a47bf1' and week(DATETIMECREATED)=week(curdate())
+group by week(DATETIMECREATED),FACEIDAWS,CAMERAID;
+
+select (DATETIMECREATED),FACEIDAWS,CAMERAID, count(FACEIDAWS) from GEYE_CAMERAFACESLOG   
+where FACEIDAWS='4894638e-4ccd-443d-98f5-098170a47bf1' and week(DATETIMECREATED)=week(curdate())
+group by week(DATETIMECREATED),FACEIDAWS,CAMERAID;
+
+
+select count(*) from GEYE_SHOPKPR_FACESLOG where face_id_aws='9c457a47-4f1c-4088-ad8f-e1fa7cdd0d4a';
+
+select * from GEYE_SHOPKPR_FACESLOG a,GEYE_CAMERAFACESLOG b
+where a.face_id_aws=b.FACEIDAWS;
+
+
+select * from GEYE_SHOPKPR_FACESLOG order by DATETIMECRTD desc;
+
+
+
+select * from GEYE_V_FACEDETAIL order by DATETIMECREATED desc;
+
+select * from GEYE_SHOP_FACEDETAILS order by DATETIMECRTD desc;
+
+select idGEYE_CAMERAFACESLOG,DATETIMECREATED,CAMERAID,FACEIDAWS,PHOTOFILENAME from GEYE_CAMERAFACESLOG
+where date(DATETIMECREATED)=curdate();
+
+select count(FACEIDAWS),idGEYE_CAMERAFACESLOG,DATETIMECREATED,CAMERAID,FACEIDAWS,PHOTOFILENAME from GEYE_CAMERAFACESLOG where date(DATETIMECREATED)=curdate() group by FACEIDAWS; 
+
+select idGEYE_CAMERAFACESLOG,DATETIMECREATED,CAMERAID,count(FACEIDAWS),FACEIDAWS,PHOTOFILENAME from GEYE_CAMERAFACESLOG;
+
+SELECT DATE_FORMAT(DATETIMECREATED, '%Y-%m-%d') AS DATE, FACEIDAWS, CAMERAID, COUNT(FACEIDAWS) 
+FROM GEYE_CAMERAFACESLOG 
+WHERE  YEAR(DATETIMECREATED) = YEAR(CURDATE()) 
+  AND MONTH(DATETIMECREATED) = MONTH(CURDATE())
+GROUP BY DATE, FACEIDAWS, CAMERAID;
+
+
+
+
+
+
+
+
+
+
+
+
+

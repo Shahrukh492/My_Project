@@ -1,0 +1,6 @@
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.5564689636230469----For image : 2023-02-24 10_14_52_902456.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 1.242323637008667----For image : 2023-02-24 10_32_52_356050.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.9430222511291504----For image : 2023-02-24 10_38_32_642300.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.42261385917663574----For image : 2023-02-24 10_40_06_266634.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.5381679534912109----For image : 2023-02-24 11_20_45_819290.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.9243273735046387----For image : 2023-02-24 11_21_04_638739.jpg

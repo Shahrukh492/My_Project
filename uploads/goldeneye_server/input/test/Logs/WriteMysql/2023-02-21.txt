@@ -1,0 +1,9 @@
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.4967079162597656----For image : 2023-02-21 08_33_08_997218.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.7578954696655273----For image : 2023-02-21 08_33_10_100970.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 1.0211646556854248----For image : 2023-02-21 08_33_15_233749.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 3.229810953140259----For image : 2023-02-21 08_33_22_880643.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 3.5070903301239014----For image : 2023-02-21 08_33_26_384785.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 3.868060827255249----For image : 2023-02-21 08_33_30_363976.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 4.285568952560425----For image : 2023-02-21 08_33_35_976764.jpg
+Not Done : Getting Errror----Error Name : 1048 (23000): Column 'FACEIDAWS' cannot be null----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 4.680160999298096----For image : 2023-02-21 08_33_22_836260.jpg
+Done : Data Inserted for Existing face with Existing FaceID----Func Name : insert----ProgramFile Name : WriteMysql.py----Program execution time : 0.5466043949127197----For image : 2023-02-21 12_52_55_187243.jpg
