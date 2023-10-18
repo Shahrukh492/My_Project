@@ -25,7 +25,7 @@ def authentication():
         if credentials and credentials.expired and credentials.refresh_token:
             credentials.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file('client_secret_apps.json', SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file('E:\Py_Jupyter\client_secret_apps.json', SCOPES)
             credentials = flow.run_local_server(port=0)
 
         with open('token.json', 'w') as token:
@@ -75,9 +75,12 @@ def send_message(service, user_id, message):
         print(f"Message Id: {message['id']}")
         return message
     except HttpError as error:
-        # TODO(developer) - Handle errors from gmail API
         print(f"An error occurred: {error}")
 
 
 if __name__ == "__main__":
-    prepare_and_send_email('clark.kent8748@gmail.com', 'Greeting from Hamza Aziz', 'This is a test email', 'Capture1.JPG')
+    recipients = ['clark.kent8748@gmail.com', 'shekhshahrukh492@gmail.com','shahrukhsrk0571@gmail.com','shahrukh.md@consultit.co.in'] 
+    pic=r"E:\Py_Jupyter\web.jpeg"
+    
+    for recipient in recipients:
+        prepare_and_send_email(recipient, 'Greeting from Hamza Aziz', 'This is a test email', pic)
