@@ -41,7 +41,7 @@ def prepare_and_send_email(recipient, subject, message_text, attachment):
     try:
         service = build(serviceName='gmail', version='v1', credentials=credentials)
 
-        message = create_message('ben.smith41349@gmail.com', recipient, subject, message_text, attachment)
+        message = create_message('yourmail_send@gmail.com', recipient, subject, message_text, attachment)
         send_message(service, 'me', message)
     except HttpError as error:
         print(f"An error occurred: {error}")
@@ -79,8 +79,8 @@ def send_message(service, user_id, message):
 
 
 if __name__ == "__main__":
-    recipients = ['clark.kent8748@gmail.com', 'shekhshahrukh492@gmail.com','shahrukhsrk0571@gmail.com','shahrukh.md@consultit.co.in'] 
+    recipients = ['client1@gmail.com', 'client2@gmail.com','client3@gmail.com','client4@cexample.co.in'] 
     pic=r"E:\Py_Jupyter\web.jpeg"
     
     for recipient in recipients:
-        prepare_and_send_email(recipient, 'Greeting from Hamza Aziz', 'This is a test email', pic)
+        prepare_and_send_email(recipient, 'Hello sir', 'This is a your email', pic)
