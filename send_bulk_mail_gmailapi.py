@@ -25,7 +25,7 @@ def authentication():
         if credentials and credentials.expired and credentials.refresh_token:
             credentials.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file('E:\Py_Jupyter\client_secret_apps.json', SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file('path/home/client_secret_apps.json', SCOPES)
             credentials = flow.run_local_server(port=0)
 
         with open('token.json', 'w') as token:
@@ -41,7 +41,7 @@ def prepare_and_send_email(recipient, subject, message_text):
     try:
         service = build(serviceName='gmail', version='v1', credentials=credentials)
 
-        message = create_message('ben.smith41349@gmail.com', recipient, subject, message_text)
+        message = create_message('sendyourmail@gmail.com', recipient, subject, message_text)
         send_message(service, 'me', message)
     except HttpError as error:
         print(f"An error occurred: {error}")
@@ -73,7 +73,7 @@ def send_message(service, user_id, message):
 
 if __name__ == "__main__":
 
-    recipients = ['info@linquip.com','sojangeneraltradingllc@gmail.com','info@expeditiontravelandtourism.com','info@pristellar.com','sierracartel.ae@gmail.com','tanujchauhan76@gmail.com','clark.kent8748@gmail.com', 'shekhshahrukh492@gmail.com', 'shahrukhsrk0571@gmail.com', 'kentc8748@gmail.com']
+    recipients = ['info@linquip.com','sojangeneraltradingllc@gmail.com','info@expeditiontravelandtourism.com','info@pristellar.com','sierracartel.ae@gmail.com','tanujchauhan76@gmail.com']
     sub="Proposal For Website Promotion!"
     msg="""
 Hello, 
@@ -85,14 +85,14 @@ Top Ranking in Google:
 Website Promotion (SEO, SMO, PPC, Google, Yahoo and Bing). 
 Email us back to get a full Proposal. So let me know if you would be  
 
-Interested or like me to mail you more details or schedule a call.  
+Interested or like me to mail you more details or schedule a call?  
 
 We would love to work with you! 
 
 Please just send me your Skype ID. 
 
 Thanks & Regards,
-Ben Smith
+Your Name
 """
     
     for recipient in recipients:
